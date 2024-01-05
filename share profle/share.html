@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>share the profile</title>
+    <style>
+@keyframes move {
+    0%   {transform: translateX(0px);}
+    25% {transform: translateX(200px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(-200px);}
+    100% {transform: translateX(0px);}
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    animation: move 4s linear infinite;
+}
+    </style>
+</head>
+<body>
+    <!-- main container -->
+    <div class="w-[100vw] h-[100vh] bg-black flex relative justify-center items-center">
+        <!-- circle ka div -->
+        <div id="circle" class="animation-pluse">
+        <div class="w-[150px] h-[150px] bg-red-600 rounded-full absolute right-[900px] top-10 z-10"></div>
+        <div class="w-[150px] h-[150px] bg-purple-600 rounded-full absolute bottom-10 right-[500px] z-10 "></div>
+    </div>
+        <!-- card ka div -->
+        <div class="w-[400px] h-[400px]  bg-white bg-opacity-20 bg-black  my-auto flex flex-col items-center text-white z-10">
+            <!-- <img src="./WhatsApp Image 2024-01-05 at 03.07.54.jpeg" alt=""> -->
+            <div>
+                <img src="./WhatsApp Image 2024-01-05 at 03.07.54.jpeg" alt="" class="rounded-full w-[150px] my-3 mx-auto ">
+                <h1 class="text-center font-bold text-2xl">Sahil Shaikh</h1> <br>
+                <h1 class="text-center text-bold text-lg">Full Stack Web developer</h1>
+
+            </div>
+            <div class="flex gap-3 my-4 ">
+                <button id="share" class="border-4 p-2 rounded-xl hover:bg-white hover:text-black ">
+                    <i class="fa-regular fa-share-from-square"></i>Share my profile
+                </button>
+                <button id="follow" class="border-4 p-2 rounded-xl hover:bg-white hover:text-black  ">
+                    Follow me
+                </button>
+                <!-- <button id="followed" class="absolute border-4 p-2 rounded-xl hover:bg-white hover:text-black right-[620px] hidden">
+                    followed <i class="fa-solid fa-check text-green-600"></i>
+                </button> -->
+            </div>
+        </div>
+        <!-- share wala card -->
+        <div id="card" class="w-[500px] bg-white text-black h-[190px] p-2 rounded-xl  absolute z-10 opacity-90 hidden duration-300 transition-all ease-linear delay-100">
+            <div class="text-red flex items-center flex-end justify-between">
+                <h2 >Share My Profile</h2>
+                <i class="fa-solid fa-xmark cursor-pointer" id="x"></i>
+            </div>
+            <hr class="border-2 border-black my-4">
+            <h2>Share this via</h2>
+            <div class="w-[400px] flex flex-row overflow-x-hidden h-[30px] justify-evenly my-5 cursor-pointer -mx-4 overflow-y-hidden">
+               <!-- <a href="https://www.instagram.com/" class="h-full w-full"></a>  -->
+               <img src="./images/insta trans.webp" alt="">
+                <img src="./images/facebook-logo-0.webp" alt="">
+                <img src="./images/whatsapp logo.webp" alt=""><img src="./images/Twitter-Logo-500x281.webp" alt="" class="bg-blend-multiply"><img src="./images/telegram.webp" alt="">
+            </div>
+          </div>
+    </div>
+
+    <script src="./share.js"></script>
+</body>
+</html>
